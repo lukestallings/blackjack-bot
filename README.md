@@ -2,7 +2,20 @@
 
 A blackjack-playing bot in plain Python (no dependencies). It plays perfect basic strategy and can optionally count cards with the Hi-Lo system, raising its bets and making key index plays when the count favours the player.
 
-## Usage
+## GUI
+
+```bash
+python3 blackjack_gui.py
+```
+
+This opens a blackjack table in your browser. Two modes:
+
+- **You play**: bet, then hit / stand / double / split (keys `H` `S` `D` `P`, `Space` to deal). The bot grades every decision and tracks your accuracy. Tick **Show bot's advice** to highlight its move.
+- **Bot plays**: step through the bot's moves one at a time, or auto-play at up to turbo speed.
+
+The sidebar shows the live Hi-Lo count, the bot's suggested bet, session stats and a bankroll chart. Toggle **Card counting** to compare counting against flat-bet basic strategy. The same rule flags as the command-line tool work here too, e.g. `python3 blackjack_gui.py --h17 --decks 2`.
+
+## Command line
 
 Watch the bot play:
 
